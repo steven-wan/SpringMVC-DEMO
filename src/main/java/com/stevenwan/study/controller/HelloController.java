@@ -1,6 +1,8 @@
 package com.stevenwan.study.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import com.stevenwan.study.dto.BarCodePayDTO;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloController {
 
-    @GetMapping("/getInfo")
-    public String hello() {
+    @PostMapping("/getInfo")
+    public String hello(@RequestBody BarCodePayDTO barCodePayDTO) {
         return "java code annotation config";
     }
 
